@@ -8,8 +8,43 @@
 </head>
 <body>
 
-
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fbL9QdWWJzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div style="text-align: center;">
+	<button onclick="playPause()">PlayPause</button>
+	<button onclick="makeBig()">Big</button>
+	<button onclick="makeSmall()">Small</button>
+	<button onclick="makeNormal()">Normal</button>
+	<br><br>
+	<video id="video1">
+	<source src="15_Things_I_Have_Learned_LR.mp4" type="">
+	</video>
+</div>
+
+<script>
+	
+	var	myVideo = document.getElementById("video1");
+
+function playPause(){
+	if (myVideo.paused)
+		myVideo.play();
+	else
+		myVideo.pause();
+}
+
+function makeBig(){
+	myVideo.width = 1160
+}
+
+function makeSmall(){
+	myVideo.width = 320
+}
+
+function makeNormal(){
+	myVideo.width = 420
+}
+
+</script>
+
 </body>
 </html>
